@@ -1,0 +1,61 @@
+[gd_scene load_steps=2 format=3 uid="uid://crwtdq7ie03wv"]
+
+[ext_resource type="Script" path="res://Scripts/UI/PartyManagerScreen.gd" id="1_72h0d"]
+
+[node name="PartyManagement" type="Control"]
+layout_mode = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_72h0d")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PartyContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/PartyContainer"]
+layout_mode = 2
+
+[node name="PartyList" type="VBoxContainer" parent="HBoxContainer/PartyContainer"]
+layout_mode = 2
+
+[node name="RowContainer" type="HBoxContainer" parent="HBoxContainer/PartyContainer"]
+layout_mode = 2
+
+[node name="FrontRow" type="VBoxContainer" parent="HBoxContainer/PartyContainer/RowContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/PartyContainer/RowContainer/FrontRow"]
+layout_mode = 2
+
+[node name="Members" type="VBoxContainer" parent="HBoxContainer/PartyContainer/RowContainer/FrontRow"]
+layout_mode = 2
+
+[node name="BackRow" type="VBoxContainer" parent="HBoxContainer/PartyContainer/RowContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/PartyContainer/RowContainer/BackRow"]
+layout_mode = 2
+
+[node name="Members" type="VBoxContainer" parent="HBoxContainer/PartyContainer/RowContainer/BackRow"]
+layout_mode = 2
+
+[node name="CharacterInfo" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Info" type="RichTextLabel" parent="CharacterInfo"]
+layout_mode = 2

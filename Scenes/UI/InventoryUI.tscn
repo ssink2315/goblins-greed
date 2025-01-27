@@ -1,0 +1,108 @@
+[gd_scene load_steps=2 format=3 uid="uid://b866myn38xuyd"]
+
+[ext_resource type="Script" path="res://Scripts/UI/InventoryUI.gd" id="1_inv"]
+
+[node name="InventoryUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_inv")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.12549, 0.12549, 0.12549, 0.901961)
+
+[node name="MainContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="TopBar" type="HBoxContainer" parent="MainContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Title" type="Label" parent="MainContainer/TopBar"]
+layout_mode = 2
+text = "Inventory"
+
+[node name="Spacer" type="Control" parent="MainContainer/TopBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GoldIcon" type="TextureRect" parent="MainContainer/TopBar"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+
+[node name="GoldAmount" type="Label" parent="MainContainer/TopBar"]
+layout_mode = 2
+text = "0"
+
+[node name="HSplitContainer" type="HSplitContainer" parent="MainContainer"]
+layout_mode = 2
+split_offset = 200
+
+[node name="LeftPanel" type="VBoxContainer" parent="MainContainer/HSplitContainer"]
+layout_mode = 2
+
+[node name="ItemList" type="ItemList" parent="MainContainer/HSplitContainer/LeftPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ActionPanel" type="HBoxContainer" parent="MainContainer/HSplitContainer/LeftPanel"]
+layout_mode = 2
+alignment = 1
+
+[node name="UseButton" type="Button" parent="MainContainer/HSplitContainer/LeftPanel/ActionPanel"]
+layout_mode = 2
+text = "Use"
+
+[node name="EquipButton" type="Button" parent="MainContainer/HSplitContainer/LeftPanel/ActionPanel"]
+layout_mode = 2
+text = "Equip"
+
+[node name="DropButton" type="Button" parent="MainContainer/HSplitContainer/LeftPanel/ActionPanel"]
+layout_mode = 2
+text = "Drop"
+
+[node name="RightPanel" type="VBoxContainer" parent="MainContainer/HSplitContainer"]
+layout_mode = 2
+
+[node name="EquipmentPanel" type="PanelContainer" parent="MainContainer/HSplitContainer/RightPanel"]
+layout_mode = 2
+
+[node name="Slots" type="GridContainer" parent="MainContainer/HSplitContainer/RightPanel/EquipmentPanel"]
+layout_mode = 2
+columns = 2
+
+[node name="WeaponSlot" type="TextureButton" parent="MainContainer/HSplitContainer/RightPanel/EquipmentPanel/Slots"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="ArmorSlot" type="TextureButton" parent="MainContainer/HSplitContainer/RightPanel/EquipmentPanel/Slots"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="ItemDescription" type="RichTextLabel" parent="MainContainer/HSplitContainer/RightPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+
+[node name="CharacterStats" type="RichTextLabel" parent="MainContainer/HSplitContainer/RightPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true

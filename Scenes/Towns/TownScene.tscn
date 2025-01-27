@@ -1,0 +1,48 @@
+[gd_scene load_steps=2 format=3 uid="uid://cq8465aqm56y"]
+
+[ext_resource type="Script" path="res://Scripts/Town.gd" id="1_r25jr"]
+
+[node name="TownScene" type="Node2D"]
+script = ExtResource("1_r25jr")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Locations" type="Node2D" parent="."]
+
+[node name="Shop" type="Node2D" parent="Locations"]
+
+[node name="Tavern" type="Node2D" parent="Locations"]
+
+[node name="Guild" type="Node2D" parent="Locations"]
+
+[node name="Explore" type="Node2D" parent="Locations"]
+
+[node name="NPCs" type="Node2D" parent="."]
+
+[node name="Merchants" type="Node2D" parent="NPCs"]
+
+[node name="Questgivers" type="Node2D" parent="NPCs"]
+
+[node name="TownUI" type="CanvasLayer" parent="."]
+
+[node name="LocationMenu" type="Control" parent="TownUI"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ShopInterface" type="Control" parent="TownUI"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DialogueSystem" type="Control" parent="TownUI"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TownState" type="Node" parent="."]

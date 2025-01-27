@@ -1,0 +1,147 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Scripts/UI/CharacterSheetUI.gd" id="1_char"]
+
+[node name="CharacterSheetUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_char")
+
+[node name="Layout" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TopBar" type="PanelContainer" parent="Layout"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Layout/TopBar"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Layout/TopBar/MarginContainer"]
+layout_mode = 2
+
+[node name="CharacterName" type="Label" parent="Layout/TopBar/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+
+[node name="LevelLabel" type="Label" parent="Layout/TopBar/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Level 1"
+
+[node name="ExpBar" type="ProgressBar" parent="Layout/TopBar/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(200, 20)
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Content" type="MarginContainer" parent="Layout"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HSplitContainer" type="HSplitContainer" parent="Layout/Content"]
+layout_mode = 2
+split_offset = 300
+
+[node name="LeftPanel" type="VBoxContainer" parent="Layout/Content/HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="StatsPanel" type="PanelContainer" parent="Layout/Content/HSplitContainer/LeftPanel"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Layout/Content/HSplitContainer/LeftPanel/StatsPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Layout/Content/HSplitContainer/LeftPanel/StatsPanel/MarginContainer"]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="Layout/Content/HSplitContainer/LeftPanel/StatsPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+columns = 3
+
+[node name="Labels" type="VBoxContainer" parent="Layout/Content/HSplitContainer/LeftPanel/StatsPanel/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+
+[node name="Values" type="VBoxContainer" parent="Layout/Content/HSplitContainer/LeftPanel/StatsPanel/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+
+[node name="AttributeButtons" type="VBoxContainer" parent="Layout/Content/HSplitContainer/LeftPanel/StatsPanel/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+
+[node name="DerivedStats" type="RichTextLabel" parent="Layout/Content/HSplitContainer/LeftPanel/StatsPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+bbcode_enabled = true
+fit_content = true
+
+[node name="AttributePoints" type="Label" parent="Layout/Content/HSplitContainer/LeftPanel"]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="RightPanel" type="VBoxContainer" parent="Layout/Content/HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SkillPoints" type="PanelContainer" parent="Layout/Content/HSplitContainer/RightPanel"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Layout/Content/HSplitContainer/RightPanel/SkillPoints"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Layout/Content/HSplitContainer/RightPanel/SkillPoints/MarginContainer"]
+layout_mode = 2
+
+[node name="Header" type="HBoxContainer" parent="Layout/Content/HSplitContainer/RightPanel/SkillPoints/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Layout/Content/HSplitContainer/RightPanel/SkillPoints/MarginContainer/VBoxContainer/Header"]
+layout_mode = 2
+text = "Skill Points"
+
+[node name="OpenSkillTreeButton" type="Button" parent="Layout/Content/HSplitContainer/RightPanel/SkillPoints/MarginContainer/VBoxContainer/Header"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Open Skill Tree"
+
+[node name="SkillPaths" type="RichTextLabel" parent="Layout/Content/HSplitContainer/RightPanel/SkillPoints/MarginContainer/VBoxContainer"]
+layout_mode = 2
+bbcode_enabled = true
+fit_content = true
+
+[node name="LearnedSkills" type="RichTextLabel" parent="Layout/Content/HSplitContainer/RightPanel"]
+layout_mode = 2
+bbcode_enabled = true
+fit_content = true
+
+[node name="StatusEffects" type="RichTextLabel" parent="Layout/Content/HSplitContainer/RightPanel"]
+layout_mode = 2
+bbcode_enabled = true
+fit_content = true
+
+[node name="Resistances" type="RichTextLabel" parent="Layout/Content/HSplitContainer/RightPanel"]
+layout_mode = 2
+bbcode_enabled = true
+fit_content = true 

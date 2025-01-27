@@ -1,0 +1,95 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" uid="base_ui" path="res://Scenes/UI/BaseUI.tscn"]
+[ext_resource type="Script" path="res://Scripts/UI/InventoryScreen.gd" id="1_5enrh"]
+
+[node name="InventoryScreen" instance=ExtResource("base_ui")]
+script = ExtResource("1_5enrh")
+
+[node name="Title" parent="Layout/TopBar/MarginContainer/HBoxContainer" index="0"]
+text = "Inventory"
+
+[node name="GoldDisplay" type="Label" parent="Layout/TopBar/MarginContainer/HBoxContainer" index="2"]
+layout_mode = 2
+text = "Gold: 0"
+
+[node name="Content" parent="Layout" index="1"]
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HSplitContainer" type="HSplitContainer" parent="Layout/Content" index="0"]
+layout_mode = 2
+
+[node name="InventoryPanel" type="PanelContainer" parent="Layout/Content/HSplitContainer" index="0"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.7
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Layout/Content/HSplitContainer/InventoryPanel" index="0"]
+layout_mode = 2
+
+[node name="FilterBar" type="HBoxContainer" parent="Layout/Content/HSplitContainer/InventoryPanel/VBoxContainer" index="0"]
+layout_mode = 2
+
+[node name="SearchInput" type="LineEdit" parent="Layout/Content/HSplitContainer/InventoryPanel/VBoxContainer/FilterBar" index="0"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Search items..."
+
+[node name="FilterButton" type="Button" parent="Layout/Content/HSplitContainer/InventoryPanel/VBoxContainer/FilterBar" index="1"]
+layout_mode = 2
+text = "Filter"
+
+[node name="SortButton" type="Button" parent="Layout/Content/HSplitContainer/InventoryPanel/VBoxContainer/FilterBar" index="2"]
+layout_mode = 2
+text = "Sort"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Layout/Content/HSplitContainer/InventoryPanel/VBoxContainer" index="1"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ItemGrid" type="GridContainer" parent="Layout/Content/HSplitContainer/InventoryPanel/VBoxContainer/ScrollContainer" index="0"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/h_separation = 4
+theme_override_constants/v_separation = 4
+columns = 6
+
+[node name="RightPanel" type="VBoxContainer" parent="Layout/Content/HSplitContainer" index="1"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.3
+
+[node name="EquipmentPanel" type="PanelContainer" parent="Layout/Content/HSplitContainer/RightPanel" index="0"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Layout/Content/HSplitContainer/RightPanel/EquipmentPanel" index="0"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Layout/Content/HSplitContainer/RightPanel/EquipmentPanel/VBoxContainer" index="0"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Equipment"
+
+[node name="GridContainer" type="GridContainer" parent="Layout/Content/HSplitContainer/RightPanel/EquipmentPanel/VBoxContainer" index="1"]
+layout_mode = 2
+columns = 2
+
+[node name="ItemDetailsPanel" type="PanelContainer" parent="Layout/Content/HSplitContainer/RightPanel" index="1"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="Layout/Content/HSplitContainer/RightPanel/ItemDetailsPanel" index="0"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="ItemDetails" type="RichTextLabel" parent="Layout/Content/HSplitContainer/RightPanel/ItemDetailsPanel/MarginContainer" index="0"]
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true

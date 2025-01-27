@@ -1,0 +1,104 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwxpvpusqadb1"]
+
+[sub_resource type="GDScript" id="GDScript_ba3ig"]
+script/source = "extends Control
+
+# Signals
+signal character_created(player_character)
+
+# References
+@onready var race_list = $RaceSelection/RaceList
+@onready var race_description = $RaceSelection/RaceDescription
+@onready var class_list = $ClassSelection/ClassList
+@onready var class_description = $ClassSelection/ClassDescription
+@onready var confirm_button = $ConfirmButton
+
+# Data
+var selected_race: String = \"\"
+var selected_class: String = \"\"
+
+func _ready():
+	_populate_lists()
+	_connect_signals()
+
+func _populate_lists():
+	# Populate race list
+	race_list.clear()
+	for race in GameDatabase.races.keys():
+		race_list.add_item(race)
+	
+	# Populate class list
+	class_list.clear()
+	for class_title in GameDatabase.classes.keys():
+		class_list.add_item(class_title)
+
+func _connect_signals():
+	race_list.item_selected.connect(_on_race_selected)
+	class_list.item_selected.connect(_on_class_selected)
+	confirm_button.pressed.connect(_on_confirm_pressed)
+
+func _on_race_selected(index: int):
+	selected_race = race_list.get_item_text(index)
+	var race_data = GameDatabase.races[selected_race]
+	race_description.text = race_data.description
+
+func _on_class_selected(index: int):
+	selected_class = class_list.get_item_text(index)
+	var class_data = GameDatabase.classes[selected_class]
+	class_description.text = class_data.description
+
+func _on_confirm_pressed():
+	if selected_race.is_empty() or selected_class.is_empty():
+		print(\"Please select both a race and a class before confirming.\")
+		return
+
+	var player_character = PlayerCharacter.new()
+	player_character.initialize(\"Hero\", selected_race, selected_class)
+	
+	emit_signal(\"character_created\", player_character)
+"
+
+[node name="CharacterCreation" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = SubResource("GDScript_ba3ig")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RaceSelection" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RaceList" type="ItemList" parent="RaceSelection"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RaceDescription" type="RichTextLabel" parent="RaceSelection"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ClassSelection" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ClassList" type="ItemList" parent="ClassSelection"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ClassDescription" type="RichTextLabel" parent="ClassSelection"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ConfirmButton" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0

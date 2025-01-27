@@ -1,0 +1,117 @@
+[gd_scene load_steps=10 format=3 uid="uid://c6s6yy810calu"]
+
+[ext_resource type="Script" path="res://Scripts/Core/GameManager.gd" id="1_00wrr"]
+[ext_resource type="Script" path="res://Scripts/Core/CombatManager.gd" id="2_ll3wi"]
+[ext_resource type="Script" path="res://Scripts/Combat/PlayerControl.gd" id="3_dv3d0"]
+[ext_resource type="Script" path="res://Scripts/Combat/AIControl.gd" id="4_lllip"]
+[ext_resource type="Script" path="res://Scripts/Combat/CombatCalculator.gd" id="5_bikku"]
+[ext_resource type="Script" path="res://Scripts/Core/PartyManager.gd" id="6_op5my"]
+[ext_resource type="Script" path="res://Scripts/Core/SaveManager.gd" id="7_i3yjf"]
+[ext_resource type="Script" path="res://Scripts/UI/GameHUD.gd" id="7_ojc1x"]
+[ext_resource type="Script" path="res://Scripts/Data/GameDatabase.gd" id="8_d0w7p"]
+
+[node name="GameManager" type="Node2D"]
+script = ExtResource("1_00wrr")
+
+[node name="CombatManager" type="Node2D" parent="."]
+script = ExtResource("2_ll3wi")
+
+[node name="PlayerControl" type="Node2D" parent="CombatManager"]
+script = ExtResource("3_dv3d0")
+
+[node name="AIControl" type="Node2D" parent="CombatManager"]
+script = ExtResource("4_lllip")
+
+[node name="CombatCalculator" type="Node2D" parent="CombatManager"]
+script = ExtResource("5_bikku")
+
+[node name="PartyManager" type="Node2D" parent="."]
+script = ExtResource("6_op5my")
+
+[node name="UIManager" type="CanvasLayer" parent="."]
+
+[node name="MainMenu" type="Control" parent="UIManager"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TitleScreen" type="Control" parent="UIManager/MainMenu"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MainButtons" type="VBoxContainer" parent="UIManager/MainMenu"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CharacterCreation" type="Control" parent="UIManager"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RaceSelection" type="Control" parent="UIManager/CharacterCreation"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ClassSelection" type="Control" parent="UIManager/CharacterCreation"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="StatAllocation" type="Control" parent="UIManager/CharacterCreation"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="InventoryUI" type="Control" parent="UIManager"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ItemList" type="ScrollContainer" parent="UIManager/InventoryUI"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="EquipmentSlots" type="GridContainer" parent="UIManager/InventoryUI"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ItemDetails" type="PanelContainer" parent="UIManager/InventoryUI"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DialogueUI" type="Control" parent="UIManager"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DialogueBox" type="PanelContainer" parent="UIManager/DialogueUI"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ChoiceOptions" type="VBoxContainer" parent="UIManager/DialogueUI"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HUD" type="CanvasLayer" parent="UIManager"]
+visible = false
+script = ExtResource("7_ojc1x")
+
+[node name="MenuLayer" type="CanvasLayer" parent="UIManager"]
+
+[node name="SaveManager" type="Node2D" parent="."]
+script = ExtResource("7_i3yjf")
+
+[node name="GameDatabase" type="Node2D" parent="."]
+script = ExtResource("8_d0w7p")

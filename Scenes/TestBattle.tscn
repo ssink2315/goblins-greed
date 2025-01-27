@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="PackedScene" path="res://Scenes/Combat/CombatUI.tscn"]
+[ext_resource type="Script" path="res://Scripts/Core/GameManager.gd"]
+
+[node name="TestBattle" type="Node2D"]
+
+[node name="GameManager" type="Node" parent="."]
+script = ExtResource("1_game")
+
+[node name="CombatUI" parent="." instance=ExtResource("2_ui")] 

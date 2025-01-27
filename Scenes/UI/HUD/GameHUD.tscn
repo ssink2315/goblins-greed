@@ -1,0 +1,73 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" uid="base_ui" path="res://Scenes/UI/BaseUI.tscn"]
+[ext_resource type="Script" path="res://Scripts/UI/GameHUD.gd" id="1_0l0kt"]
+
+[node name="GameHUD" instance=ExtResource("base_ui")]
+script = ExtResource("1_0l0kt")
+
+[node name="TopBar" parent="Layout" index="0"]
+visible = false
+
+[node name="Content" parent="Layout" index="1"]
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Layout/Content" index="0"]
+layout_mode = 2
+
+[node name="LeftPanel" type="VBoxContainer" parent="Layout/Content/HBoxContainer" index="0"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="PartyStatus" type="PanelContainer" parent="Layout/Content/HBoxContainer/LeftPanel" index="0"]
+layout_mode = 2
+
+[node name="PartyStatusContainer" type="VBoxContainer" parent="Layout/Content/HBoxContainer/LeftPanel/PartyStatus" index="0"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="ResourceDisplay" type="PanelContainer" parent="Layout/Content/HBoxContainer/LeftPanel" index="1"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Layout/Content/HBoxContainer/LeftPanel/ResourceDisplay" index="0"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="GoldDisplay" type="HBoxContainer" parent="Layout/Content/HBoxContainer/LeftPanel/ResourceDisplay/VBoxContainer" index="0"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="Icon" type="TextureRect" parent="Layout/Content/HBoxContainer/LeftPanel/ResourceDisplay/VBoxContainer/GoldDisplay" index="0"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Amount" type="Label" parent="Layout/Content/HBoxContainer/LeftPanel/ResourceDisplay/VBoxContainer/GoldDisplay" index="1"]
+layout_mode = 2
+text = "0"
+
+[node name="QuestTracker" type="PanelContainer" parent="Layout/Content/HBoxContainer/RightPanel" index="0"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="Layout/Content/HBoxContainer/RightPanel/QuestTracker" index="0"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Layout/Content/HBoxContainer/RightPanel/QuestTracker/MarginContainer" index="0"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Layout/Content/HBoxContainer/RightPanel/QuestTracker/MarginContainer/VBoxContainer" index="0"]
+layout_mode = 2
+text = "Active Quests"
+
+[node name="QuestList" type="VBoxContainer" parent="Layout/Content/HBoxContainer/RightPanel/QuestTracker/MarginContainer/VBoxContainer" index="1"]
+layout_mode = 2

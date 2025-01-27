@@ -1,0 +1,90 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Scripts/UI/SkillTreeUI.gd" id="1_skill"]
+
+[node name="SkillTreeUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_skill")
+
+[node name="Layout" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TopBar" type="PanelContainer" parent="Layout"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Layout/TopBar"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Layout/TopBar/MarginContainer"]
+layout_mode = 2
+
+[node name="BackButton" type="Button" parent="Layout/TopBar/MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "← Back"
+
+[node name="CharacterName" type="Label" parent="Layout/TopBar/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Character Name"
+
+[node name="Spacer" type="Control" parent="Layout/TopBar/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PathTypeTabs" type="TabBar" parent="Layout/TopBar/MarginContainer/HBoxContainer"]
+layout_mode = 2
+tab_count = 2
+tab_0/title = "Race"
+tab_1/title = "Class"
+
+[node name="AvailablePoints" type="Label" parent="Layout/TopBar/MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "Available Points: 0"
+
+[node name="Content" type="MarginContainer" parent="Layout"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HSplitContainer" type="HSplitContainer" parent="Layout/Content"]
+layout_mode = 2
+
+[node name="PathContainer" type="GridContainer" parent="Layout/Content/HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+columns = 2
+
+[node name="DetailsPanel" type="PanelContainer" parent="Layout/Content/HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.4
+
+[node name="SkillDetails" type="RichTextLabel" parent="Layout/Content/HSplitContainer/DetailsPanel"]
+layout_mode = 2
+bbcode_enabled = true
+
+[node name="BottomBar" type="HBoxContainer" parent="MainContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+alignment = 1
+
+[node name="BackButton" type="Button" parent="MainContainer/BottomBar"]
+layout_mode = 2
+text = "Back" 

@@ -1,0 +1,179 @@
+[gd_scene load_steps=6 format=3 uid="uid://rd48xxv58sd"]
+
+[ext_resource type="Script" path="res://Scripts/Combat/CombatScene.gd" id="1_7d61q"]
+[ext_resource type="Script" path="res://Scripts/Core/CombatManager.gd" id="2_combat"]
+[ext_resource type="Script" path="res://Scripts/UI/CombatUI.gd" id="3_ui"]
+[ext_resource type="Script" path="res://Scripts/UI/CombatLog.gd" id="4_log"]
+[ext_resource type="Script" path="res://Scripts/Combat/CombatRewards.gd" id="7_rewards"]
+
+[node name="CombatScene" type="Node2D"]
+script = ExtResource("1_7d61q")
+
+[node name="Background" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CombatManager" type="Node" parent="."]
+script = ExtResource("2_combat")
+
+[node name="TurnOrderManager" type="Node" parent="CombatManager"]
+
+[node name="ActionResolver" type="Node" parent="CombatManager"]
+
+[node name="CombatCalculator" type="Node" parent="CombatManager"]
+
+[node name="AIControl" type="Node" parent="CombatManager"]
+
+[node name="PlayerControl" type="Node" parent="CombatManager"]
+
+[node name="CombatRewards" type="Node" parent="CombatManager"]
+script = ExtResource("7_rewards")
+
+[node name="CombatUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_ui")
+
+[node name="Layout" type="VBoxContainer" parent="CombatUI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TopBar" type="PanelContainer" parent="CombatUI/Layout"]
+layout_mode = 2
+
+[node name="TurnOrder" type="HBoxContainer" parent="CombatUI/Layout/TopBar"]
+layout_mode = 2
+
+[node name="Battlefield" type="Control" parent="CombatUI/Layout"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TargetSelector" type="Control" parent="CombatUI/Layout/Battlefield"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ActionPanel" type="PanelContainer" parent="CombatUI/Layout"]
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CombatUI/Layout/ActionPanel"]
+layout_mode = 2
+
+[node name="ActionButtons" type="HBoxContainer" parent="CombatUI/Layout/ActionPanel/VBoxContainer"]
+layout_mode = 2
+
+[node name="SubActionPanel" type="PanelContainer" parent="CombatUI/Layout/ActionPanel/VBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="CombatLog" type="PanelContainer" parent="CombatUI"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -100.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("4_log")
+
+[node name="CombatPositions" type="Node2D" parent="."]
+
+[node name="PartyPositions" type="Node2D" parent="CombatPositions"]
+position = Vector2(300, 300)
+
+[node name="FrontRow" type="Node2D" parent="CombatPositions/PartyPositions"]
+
+[node name="Pos1" type="Marker2D" parent="CombatPositions/PartyPositions/FrontRow"]
+
+[node name="Pos2" type="Marker2D" parent="CombatPositions/PartyPositions/FrontRow"]
+
+[node name="Pos3" type="Marker2D" parent="CombatPositions/PartyPositions/FrontRow"]
+
+[node name="Pos4" type="Marker2D" parent="CombatPositions/PartyPositions/FrontRow"]
+
+[node name="Pos5" type="Marker2D" parent="CombatPositions/PartyPositions/FrontRow"]
+
+[node name="Pos6" type="Marker2D" parent="CombatPositions/PartyPositions/FrontRow"]
+
+[node name="BackRow" type="Node2D" parent="CombatPositions/PartyPositions"]
+position = Vector2(-100, 0)
+
+[node name="Pos1" type="Marker2D" parent="CombatPositions/PartyPositions/BackRow"]
+
+[node name="Pos2" type="Marker2D" parent="CombatPositions/PartyPositions/BackRow"]
+
+[node name="Pos3" type="Marker2D" parent="CombatPositions/PartyPositions/BackRow"]
+
+[node name="Pos4" type="Marker2D" parent="CombatPositions/PartyPositions/BackRow"]
+
+[node name="Pos5" type="Marker2D" parent="CombatPositions/PartyPositions/BackRow"]
+
+[node name="Pos6" type="Marker2D" parent="CombatPositions/PartyPositions/BackRow"]
+
+[node name="EnemyPositions" type="Node2D" parent="CombatPositions"]
+position = Vector2(700, 300)
+
+[node name="FrontRow" type="Node2D" parent="CombatPositions/EnemyPositions"]
+
+[node name="BackRow" type="Node2D" parent="CombatPositions/EnemyPositions"]
+position = Vector2(100, 0)
+
+[node name="EffectsLayer" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="AnimationContainer" type="Control" parent="EffectsLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="DamageNumbers" type="Control" parent="EffectsLayer/AnimationContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="StatusEffects" type="Control" parent="EffectsLayer/AnimationContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="SkillEffects" type="Control" parent="EffectsLayer/AnimationContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="CombatTween" type="Node" parent="."]

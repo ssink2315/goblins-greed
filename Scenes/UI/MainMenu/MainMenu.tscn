@@ -1,0 +1,56 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" uid="base_ui" path="res://Scenes/UI/BaseUI.tscn"]
+[ext_resource type="Script" path="res://Scripts/UI/MainMenu.gd" id="1_qqt83"]
+
+[node name="MainMenu" instance=ExtResource("base_ui")]
+script = ExtResource("1_qqt83")
+
+[node name="Title" parent="Layout/TopBar/MarginContainer/HBoxContainer" index="0"]
+text = "Game Title"
+theme_override_font_sizes/font_size = 32
+
+[node name="Content" parent="Layout" index="1"]
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="CenterContainer" type="CenterContainer" parent="Layout/Content" index="0"]
+layout_mode = 2
+
+[node name="MenuButtons" type="VBoxContainer" parent="Layout/Content/CenterContainer" index="0"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="NewGame" type="Button" parent="Layout/Content/CenterContainer/MenuButtons" index="0"]
+custom_minimum_size = Vector2(200, 40)
+layout_mode = 2
+text = "New Game"
+
+[node name="LoadGame" type="Button" parent="Layout/Content/CenterContainer/MenuButtons" index="1"]
+custom_minimum_size = Vector2(200, 40)
+layout_mode = 2
+text = "Load Game"
+
+[node name="Settings" type="Button" parent="Layout/Content/CenterContainer/MenuButtons" index="2"]
+custom_minimum_size = Vector2(200, 40)
+layout_mode = 2
+text = "Settings"
+
+[node name="TestBattle" type="Button" parent="Layout/Content/CenterContainer/MenuButtons" index="3"]
+custom_minimum_size = Vector2(200, 40)
+layout_mode = 2
+text = "Test Battle"
+
+[node name="Exit" type="Button" parent="Layout/Content/CenterContainer/MenuButtons" index="4"]
+custom_minimum_size = Vector2(200, 40)
+layout_mode = 2
+text = "Exit"
+
+[node name="Version" type="Label" parent="Layout/Content" index="1"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 14
+text = "v0.1.0"

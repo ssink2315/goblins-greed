@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/SkillData.gd" id="1_skill"]
+[ext_resource type="Texture2D" uid="uid://bulwark_blade" path="res://Assets/Icons/Skills/bulwark_blade.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_skill")
+skill_name = "Bulwark Blade"
+description = "Deal medium Arcane physical damage. Reduce incoming damage by 10% for 1 turn."
+skill_type = 0  # ACTIVE
+damage_type = 0  # PHYSICAL
+element = 6  # ARCANE
+mana_cost = 20
+base_power = 50.0
+scaling_stat = "INT"
+scaling_factor = 0.5
+path = "Chivalric Code"
+effects = [
+    {
+        "type": "buff",
+        "stat": "damage_reduction",
+        "value": 10.0,
+        "duration": 1
+    }
+] 

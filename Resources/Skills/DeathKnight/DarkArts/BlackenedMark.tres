@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/SkillData.gd" id="1_skill"]
+[ext_resource type="Texture2D" uid="uid://blackened_mark" path="res://Assets/Icons/Skills/blackened_mark.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_skill")
+skill_name = "Blackened Mark"
+description = "Mark an enemy for death, reducing their resistances by 25% for 2 turns."
+skill_type = 1  # BUFF
+damage_type = 1  # MAGICAL
+element = 5  # DARK
+mana_cost = 25
+path = "Dark Arts"
+effects = [
+    {
+        "type": "debuff",
+        "stat": "all_res",
+        "value": -25.0,
+        "duration": 2,
+        "target": "single_enemy"
+    }
+] 

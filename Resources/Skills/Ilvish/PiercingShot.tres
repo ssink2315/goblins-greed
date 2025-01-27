@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/SkillData.gd" id="1_skill"]
+[ext_resource type="Texture2D" uid="uid://piercing_shot" path="res://Assets/Icons/Skills/piercing_shot.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_skill")
+skill_name = "Piercing Shot"
+description = "Deal medium physical damage that ignores 10% of the target's defense."
+skill_type = 0  # ACTIVE
+damage_type = 0  # PHYSICAL
+element = 0  # NONE
+mana_cost = 20
+base_power = 50.0
+scaling_stat = "STR"
+scaling_factor = 0.5
+path = "Ilvish Tradition"
+effects = [
+    {
+        "type": "defense_pierce",
+        "value": 10.0,
+        "duration": 1
+    }
+] 

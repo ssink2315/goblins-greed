@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/SkillData.gd" id="1_skill"]
+[ext_resource type="Texture2D" uid="uid://quick_fingers" path="res://Assets/Icons/Skills/quick_fingers.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_skill")
+skill_name = "Quick Fingers"
+description = "Increase item use speed."
+skill_type = 0  # PASSIVE
+damage_type = 0  # PHYSICAL
+element = 0  # NONE
+mana_cost = 0
+path = "Shadowcraft"
+effects = [
+    {
+        "type": "passive",
+        "stat": "item_speed",
+        "value": 15.0
+    }
+] 

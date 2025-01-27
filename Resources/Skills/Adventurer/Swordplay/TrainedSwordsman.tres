@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/SkillData.gd" id="1_skill"]
+[ext_resource type="Texture2D" uid="uid://trained_swordsman" path="res://Assets/Icons/Skills/trained_swordsman.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_skill")
+skill_name = "Trained Swordsman"
+description = "Passive: +10% Physical Damage."
+skill_type = 2  # PASSIVE
+damage_type = 0  # PHYSICAL
+element = 0  # NONE
+mana_cost = 0
+scaling_stat = "STR"
+path = "Adventuring Skills"
+effects = [
+    {
+        "type": "passive",
+        "stat": "phys_damage",
+        "value": 10.0
+    }
+] 

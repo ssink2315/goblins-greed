@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/SkillData.gd" id="1_skill"]
+[ext_resource type="Texture2D" uid="uid://skeletal_onslaught" path="res://Assets/Icons/Skills/skeletal_onslaught.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_skill")
+skill_name = "Skeletal Onslaught"
+description = "Give all friendly Skeletons +25% chance to crit for 3 turns."
+skill_type = 1  # BUFF
+damage_type = 1  # MAGICAL
+element = 5  # DARK
+mana_cost = 20
+path = "Corrupted Code"
+effects = [
+    {
+        "type": "buff",
+        "stat": "crit_chance",
+        "value": 25.0,
+        "duration": 3,
+        "target": "all_summons"
+    }
+] 

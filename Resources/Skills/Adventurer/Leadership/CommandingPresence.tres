@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/SkillData.gd" id="1_skill"]
+[ext_resource type="Texture2D" uid="uid://commanding_presence" path="res://Assets/Icons/Skills/commanding_presence.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_skill")
+skill_name = "Commanding Presence"
+description = "Taunt enemies until your next turn. Gain +10% defense."
+skill_type = 1  # BUFF
+damage_type = 0  # PHYSICAL
+element = 0  # NONE
+mana_cost = 15
+path = "Adventuring Skills"
+effects = [
+    {
+        "type": "status",
+        "status": "taunt",
+        "duration": 1
+    },
+    {
+        "type": "buff",
+        "stat": "all_def",
+        "value": 10.0,
+        "duration": 1
+    }
+] 

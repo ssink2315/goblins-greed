@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/SkillData.gd" id="1_skill"]
+[ext_resource type="Texture2D" uid="uid://dark_beam" path="res://Assets/Icons/Skills/dark_beam.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_skill")
+skill_name = "Dark Beam"
+description = "Deal light Dark magic damage to all enemies in a row."
+skill_type = 0  # ACTIVE
+damage_type = 1  # MAGICAL
+element = 5  # DARK
+mana_cost = 10
+base_power = 30.0
+scaling_stat = "INT"
+scaling_factor = 0.3
+path = "Dark Arts"
+effects = [
+    {
+        "type": "row_target"
+    }
+] 

@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/SkillData.gd" id="1_skill"]
+[ext_resource type="Texture2D" uid="uid://rune_blast" path="res://Assets/Icons/Skills/rune_blast.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_skill")
+skill_name = "Rune Blast"
+description = "Deal weak Arcane magic damage to all enemies in a row."
+skill_type = 0  # ACTIVE
+damage_type = 1  # MAGICAL
+element = 6  # ARCANE
+mana_cost = 10
+base_power = 30.0
+scaling_stat = "INT"
+scaling_factor = 0.3
+path = "Magical Training"
+effects = [
+    {
+        "type": "row_target"
+    }
+] 

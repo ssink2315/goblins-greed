@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/SkillData.gd" id="1_skill"]
+[ext_resource type="Texture2D" uid="uid://vow_of_fortitude" path="res://Assets/Icons/Skills/vow_of_fortitude.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_skill")
+skill_name = "Vow of Fortitude"
+description = "Passive: Gain +10% resistance to all damage types."
+skill_type = 2  # PASSIVE
+damage_type = 0  # PHYSICAL
+element = 0  # NONE
+mana_cost = 0
+path = "Chivalric Code"
+effects = [
+    {
+        "type": "passive",
+        "stat": "all_res",
+        "value": 10.0
+    }
+] 

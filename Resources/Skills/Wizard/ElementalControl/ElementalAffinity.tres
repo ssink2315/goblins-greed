@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/SkillData.gd" id="1_skill"]
+[ext_resource type="Texture2D" uid="uid://elemental_affinity" path="res://Assets/Icons/Skills/elemental_affinity.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_skill")
+skill_name = "Elemental Affinity"
+description = "Passive: Increase all elemental damage by 15%."
+skill_type = 2  # PASSIVE
+damage_type = 1  # MAGICAL
+element = 0  # NONE
+mana_cost = 0
+path = "Elemental Magic"
+effects = [
+    {
+        "type": "passive",
+        "stat": "elemental_damage",
+        "value": 15.0
+    }
+] 

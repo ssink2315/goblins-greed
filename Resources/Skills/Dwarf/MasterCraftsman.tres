@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/SkillData.gd" id="1_skill"]
+[ext_resource type="Texture2D" uid="uid://master_craftsman" path="res://Assets/Icons/Skills/master_craftsman.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_skill")
+skill_name = "Master Craftsman"
+description = "All items used in battle are 15% more effective."
+skill_type = 2  # PASSIVE
+damage_type = 0  # PHYSICAL
+element = 0  # NONE
+mana_cost = 0
+path = "Dwarvish Lore"
+effects = [
+    {
+        "type": "passive",
+        "stat": "item_effectiveness",
+        "value": 15.0
+    }
+] 

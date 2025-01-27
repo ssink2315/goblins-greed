@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/SkillData.gd" id="1_skill"]
+[ext_resource type="Texture2D" uid="uid://inspiring_rally" path="res://Assets/Icons/Skills/inspiring_rally.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_skill")
+skill_name = "Inspiring Rally"
+description = "Grant all allies +10% damage and +10% crit chance for 2 turns."
+skill_type = 1  # BUFF
+damage_type = 0  # PHYSICAL
+element = 0  # NONE
+mana_cost = 25
+path = "Leadership"
+effects = [
+    {
+        "type": "buff",
+        "stat": "damage_mult",
+        "value": 10.0,
+        "duration": 2,
+        "target": "all_allies"
+    },
+    {
+        "type": "buff",
+        "stat": "crit_chance",
+        "value": 10.0,
+        "duration": 2,
+        "target": "all_allies"
+    }
+] 

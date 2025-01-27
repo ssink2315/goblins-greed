@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/SkillData.gd" id="1_skill"]
+[ext_resource type="Texture2D" uid="uid://shadow_technique" path="res://Assets/Icons/Skills/shadow_technique.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_skill")
+skill_name = "Shadow Technique"
+description = "Become Doomed. Deal severe Dark damage to an enemy."
+skill_type = 0  # ACTIVE
+damage_type = 1  # MAGICAL
+element = 5  # DARK
+mana_cost = 40
+base_power = 80.0
+scaling_stat = "INT"
+scaling_factor = 0.8
+path = "Agent of Darkness"
+effects = [
+    {
+        "type": "status",
+        "status": "doom",
+        "duration": 3,
+        "target": "self"
+    }
+] 

@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/SkillData.gd" id="1_skill"]
+[ext_resource type="Texture2D" uid="uid://channel_natures_power" path="res://Assets/Icons/Skills/channel_natures_power.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_skill")
+skill_name = "Channel Nature's Power"
+description = "Restore a small amount of health to all allies."
+skill_type = 0  # ACTIVE
+damage_type = 0  # PHYSICAL
+element = 0  # NONE
+mana_cost = 15
+path = "Ilvish Tradition"
+effects = [
+    {
+        "type": "heal",
+        "base_value": 25.0,
+        "scaling_stat": "WIS",
+        "scaling_factor": 0.2,
+        "target": "all_allies"
+    }
+] 

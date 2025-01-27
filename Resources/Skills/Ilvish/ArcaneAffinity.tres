@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/SkillData.gd" id="1_skill"]
+[ext_resource type="Texture2D" uid="uid://arcane_affinity" path="res://Assets/Icons/Skills/arcane_affinity.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_skill")
+skill_name = "Arcane Affinity"
+description = "Increase Arcane damage dealt by 15%."
+skill_type = 2  # PASSIVE
+damage_type = 0  # PHYSICAL
+element = 6  # ARCANE
+mana_cost = 0
+path = "Ilvish Tradition"
+effects = [
+    {
+        "type": "passive",
+        "stat": "arcane_damage",
+        "value": 15.0
+    }
+] 

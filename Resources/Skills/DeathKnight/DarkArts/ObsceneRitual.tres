@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/SkillData.gd" id="1_skill"]
+[ext_resource type="Texture2D" uid="uid://obscene_ritual" path="res://Assets/Icons/Skills/obscene_ritual.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_skill")
+skill_name = "Obscene Ritual"
+description = "Inflict Cursed and Doomed on all enemies."
+skill_type = 1  # BUFF
+damage_type = 1  # MAGICAL
+element = 5  # DARK
+mana_cost = 45
+path = "Dark Arts"
+effects = [
+    {
+        "type": "status",
+        "status": "curse",
+        "duration": 3,
+        "target": "all_enemies"
+    },
+    {
+        "type": "status",
+        "status": "doom",
+        "duration": 3,
+        "target": "all_enemies"
+    }
+] 

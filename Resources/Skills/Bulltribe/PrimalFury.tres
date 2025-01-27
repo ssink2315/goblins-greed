@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/SkillData.gd" id="1_skill"]
+[ext_resource type="Texture2D" uid="uid://primal_fury" path="res://Assets/Icons/Skills/primal_fury.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_skill")
+skill_name = "Primal Fury"
+description = "Enter a rage state. Gain +20% damage but take 10% more damage for 3 turns."
+skill_type = 1  # BUFF
+damage_type = 0  # PHYSICAL
+element = 0  # NONE
+mana_cost = 30
+path = "Tribal Fury"
+effects = [
+    {
+        "type": "buff",
+        "stat": "damage_mult",
+        "value": 20.0,
+        "duration": 3
+    },
+    {
+        "type": "debuff",
+        "stat": "damage_taken",
+        "value": 10.0,
+        "duration": 3,
+        "target": "self"
+    }
+] 

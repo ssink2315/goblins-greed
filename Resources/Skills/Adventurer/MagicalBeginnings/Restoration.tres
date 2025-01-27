@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/SkillData.gd" id="1_skill"]
+[ext_resource type="Texture2D" uid="uid://restoration" path="res://Assets/Icons/Skills/restoration.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_skill")
+skill_name = "Restoration"
+description = "Restore a small amount of health to an ally."
+skill_type = 1  # BUFF
+damage_type = 1  # MAGICAL
+element = 3  # HOLY
+mana_cost = 15
+base_power = 30.0
+scaling_stat = "INT"
+scaling_factor = 0.3
+path = "Magical Whimsy"
+effects = [
+    {
+        "type": "heal",
+        "target": "single_ally"
+    }
+] 

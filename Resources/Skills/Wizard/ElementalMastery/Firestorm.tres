@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/SkillData.gd" id="1_skill"]
+[ext_resource type="Texture2D" uid="uid://firestorm" path="res://Assets/Icons/Skills/firestorm.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_skill")
+skill_name = "Firestorm"
+description = "Deal heavy Fire damage to all enemies and inflict Burn."
+skill_type = 0  # ACTIVE
+damage_type = 1  # MAGICAL
+element = 1  # FIRE
+mana_cost = 45
+base_power = 65.0
+scaling_stat = "INT"
+scaling_factor = 0.7
+path = "Elemental Magic"
+effects = [
+    {
+        "type": "status",
+        "status": "burn",
+        "duration": 3,
+        "target": "all_enemies"
+    }
+] 

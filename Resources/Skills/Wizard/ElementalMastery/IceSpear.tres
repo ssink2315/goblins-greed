@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/SkillData.gd" id="1_skill"]
+[ext_resource type="Texture2D" uid="uid://ice_spear" path="res://Assets/Icons/Skills/ice_spear.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_skill")
+skill_name = "Ice Spear"
+description = "Deal medium Ice damage to an enemy and reduce their AGI by 15%."
+skill_type = 0  # ACTIVE
+damage_type = 1  # MAGICAL
+element = 2  # ICE
+mana_cost = 25
+base_power = 50.0
+scaling_stat = "INT"
+scaling_factor = 0.6
+path = "Elemental Magic"
+effects = [
+    {
+        "type": "debuff",
+        "stat": "AGI",
+        "value": -15.0,
+        "duration": 2,
+        "target": "hit_target"
+    }
+] 

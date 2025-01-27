@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/SkillData.gd" id="1_skill"]
+[ext_resource type="Texture2D" uid="uid://drain_flurry" path="res://Assets/Icons/Skills/drain_flurry.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_skill")
+skill_name = "Drain Flurry"
+description = "Deal medium Dark physical damage to an enemy with 50% accuracy. Drain 25% of damage dealt as HP."
+skill_type = 0  # ACTIVE
+damage_type = 0  # PHYSICAL
+element = 5  # DARK
+mana_cost = 20
+base_power = 50.0
+scaling_stat = "INT"
+scaling_factor = 0.5
+path = "Agent of Darkness"
+effects = [
+    {
+        "type": "accuracy_mod",
+        "value": -50.0
+    },
+    {
+        "type": "lifesteal",
+        "value": 25.0
+    }
+] 

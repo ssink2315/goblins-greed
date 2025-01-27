@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/SkillData.gd" id="1_skill"]
+[ext_resource type="Texture2D" uid="uid://precision_strike" path="res://Assets/Icons/Skills/precision_strike.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_skill")
+skill_name = "Precision Strike"
+description = "Deal medium pure physical damage and gain +15% Crit Chance for 1 turn."
+skill_type = 0  # ACTIVE
+damage_type = 0  # PHYSICAL
+element = 0  # NONE
+mana_cost = 20
+base_power = 50.0
+scaling_stat = "STR"
+scaling_factor = 0.5
+path = "Knightly Valor"
+effects = [
+    {
+        "type": "buff",
+        "stat": "crit_chance",
+        "value": 15.0,
+        "duration": 1
+    }
+] 

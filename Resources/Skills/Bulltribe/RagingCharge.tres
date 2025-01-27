@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/SkillData.gd" id="1_skill"]
+[ext_resource type="Texture2D" uid="uid://raging_charge" path="res://Assets/Icons/Skills/raging_charge.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_skill")
+skill_name = "Raging Charge"
+description = "Deal heavy physical damage. Take 10% of the damage you deal as health."
+skill_type = 0  # ACTIVE
+damage_type = 0  # PHYSICAL
+element = 0  # NONE
+mana_cost = 25
+base_power = 75.0
+scaling_stat = "STR"
+scaling_factor = 0.6
+path = "Tribal Fury"
+effects = [
+    {
+        "type": "heal",
+        "value": 0.1,
+        "target": "self"
+    }
+] 

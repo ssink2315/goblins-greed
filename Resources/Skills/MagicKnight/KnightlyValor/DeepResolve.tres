@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/SkillData.gd" id="1_skill"]
+[ext_resource type="Texture2D" uid="uid://deep_resolve" path="res://Assets/Icons/Skills/deep_resolve.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_skill")
+skill_name = "Deep Resolve"
+description = "Gain +50% Physical and Magic resistance for 2 turns."
+skill_type = 1  # BUFF
+damage_type = 0  # PHYSICAL
+element = 0  # NONE
+mana_cost = 30
+path = "Knightly Valor"
+effects = [
+    {
+        "type": "buff",
+        "stat": "phys_res",
+        "value": 50.0,
+        "duration": 2
+    },
+    {
+        "type": "buff",
+        "stat": "magic_res",
+        "value": 50.0,
+        "duration": 2
+    }
+] 

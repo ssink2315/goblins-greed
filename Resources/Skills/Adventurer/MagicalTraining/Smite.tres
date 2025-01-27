@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/SkillData.gd" id="1_skill"]
+[ext_resource type="Texture2D" uid="uid://smite" path="res://Assets/Icons/Skills/smite.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_skill")
+skill_name = "Smite"
+description = "Deal medium Holy damage to an enemy."
+skill_type = 0  # ACTIVE
+damage_type = 1  # MAGICAL
+element = 3  # HOLY
+mana_cost = 20
+base_power = 50.0
+scaling_stat = "INT"
+scaling_factor = 0.5
+path = "Magical Training" 

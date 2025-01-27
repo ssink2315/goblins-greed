@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/SkillData.gd" id="1_skill"]
+[ext_resource type="Texture2D" uid="uid://colonizing_people" path="res://Assets/Icons/Skills/colonizing_people.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_skill")
+skill_name = "Colonizing People"
+description = "Gain +5% to all resistances."
+skill_type = 2  # PASSIVE
+damage_type = 0  # PHYSICAL
+element = 0  # NONE
+mana_cost = 0
+path = "Adaptability"
+effects = [
+    {
+        "type": "passive",
+        "stat": "all_res",
+        "value": 5.0
+    }
+] 

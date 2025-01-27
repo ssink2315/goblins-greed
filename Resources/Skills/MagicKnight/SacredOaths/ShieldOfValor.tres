@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/SkillData.gd" id="1_skill"]
+[ext_resource type="Texture2D" uid="uid://shield_of_valor" path="res://Assets/Icons/Skills/shield_of_valor.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_skill")
+skill_name = "Shield of Valor"
+description = "Become the priority target and gain +50% Physical and Magical resistance for 1 turn."
+skill_type = 1  # BUFF
+damage_type = 0  # PHYSICAL
+element = 0  # NONE
+mana_cost = 25
+path = "Chivalric Code"
+effects = [
+    {
+        "type": "status",
+        "status": "taunt",
+        "duration": 1
+    },
+    {
+        "type": "buff",
+        "stat": "phys_res",
+        "value": 50.0,
+        "duration": 1
+    },
+    {
+        "type": "buff",
+        "stat": "magic_res",
+        "value": 50.0,
+        "duration": 1
+    }
+] 

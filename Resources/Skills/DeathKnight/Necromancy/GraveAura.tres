@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/SkillData.gd" id="1_skill"]
+[ext_resource type="Texture2D" uid="uid://grave_aura" path="res://Assets/Icons/Skills/grave_aura.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_skill")
+skill_name = "Grave Aura"
+description = "Passive: Your summons gain a portion of your defenses (1/8 PDEF and MDEF)."
+skill_type = 2  # PASSIVE
+damage_type = 1  # MAGICAL
+element = 5  # DARK
+mana_cost = 0
+path = "Necromancy"
+effects = [
+    {
+        "type": "passive",
+        "stat": "summon_def_share",
+        "value": 12.5  # 1/8 = 12.5%
+    }
+] 

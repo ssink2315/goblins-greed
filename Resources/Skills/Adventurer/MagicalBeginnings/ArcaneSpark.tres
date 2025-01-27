@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/SkillData.gd" id="1_skill"]
+[ext_resource type="Texture2D" uid="uid://arcane_spark" path="res://Assets/Icons/Skills/arcane_spark.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_skill")
+skill_name = "Arcane Spark"
+description = "Deal weak Arcane magic damage to a single target."
+skill_type = 0  # ACTIVE
+damage_type = 1  # MAGICAL
+element = 6  # ARCANE
+mana_cost = 10
+base_power = 30.0
+scaling_stat = "INT"
+scaling_factor = 0.3
+path = "Magical Whimsy" 

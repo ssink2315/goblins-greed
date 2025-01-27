@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/SkillData.gd" id="1_skill"]
+[ext_resource type="Texture2D" uid="uid://dark_strike" path="res://Assets/Icons/Skills/dark_strike.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_skill")
+skill_name = "Dark Strike"
+description = "Deal medium Dark physical damage and heal for 10% of the damage dealt."
+skill_type = 0  # ACTIVE
+damage_type = 0  # PHYSICAL
+element = 5  # DARK
+mana_cost = 20
+base_power = 50.0
+scaling_stat = "INT"
+scaling_factor = 0.5
+path = "Corrupted Code"
+effects = [
+    {
+        "type": "lifesteal",
+        "value": 10.0
+    }
+] 

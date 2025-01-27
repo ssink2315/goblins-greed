@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/SkillData.gd" id="1_skill"]
+[ext_resource type="Texture2D" uid="uid://dark_sweep" path="res://Assets/Icons/Skills/dark_sweep.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_skill")
+skill_name = "Dark Sweep"
+description = "Deal weak Dark magic damage to yourself, then weak Dark physical damage to all enemies."
+skill_type = 0  # ACTIVE
+damage_type = 0  # PHYSICAL
+element = 5  # DARK
+mana_cost = 10
+base_power = 30.0
+scaling_stat = "INT"
+scaling_factor = 0.3
+path = "Agent of Darkness"
+effects = [
+    {
+        "type": "self_damage",
+        "power": 30.0,
+        "scaling_stat": "INT",
+        "scaling_factor": 0.3
+    },
+    {
+        "type": "aoe"
+    }
+] 

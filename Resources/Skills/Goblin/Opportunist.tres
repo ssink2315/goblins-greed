@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/SkillData.gd" id="1_skill"]
+[ext_resource type="Texture2D" uid="uid://opportunist" path="res://Assets/Icons/Skills/opportunist.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_skill")
+skill_name = "Opportunist"
+description = "Gain increased damage against debuffed targets."
+skill_type = 2  # PASSIVE
+damage_type = 0  # PHYSICAL
+element = 0  # NONE
+mana_cost = 0
+path = "Shadowcraft"
+effects = [
+    {
+        "type": "passive",
+        "stat": "debuffed_damage",
+        "value": 20.0,
+        "condition": "target_debuffed"
+    }
+] 

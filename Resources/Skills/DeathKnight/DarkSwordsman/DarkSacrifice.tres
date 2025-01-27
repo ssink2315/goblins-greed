@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/SkillData.gd" id="1_skill"]
+[ext_resource type="Texture2D" uid="uid://dark_sacrifice" path="res://Assets/Icons/Skills/dark_sacrifice.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_skill")
+skill_name = "Dark Sacrifice"
+description = "Deal medium Dark magical damage to yourself. For the rest of the battle, you have +10% damage and +10% chance to crit."
+skill_type = 0  # ACTIVE
+damage_type = 1  # MAGICAL
+element = 5  # DARK
+mana_cost = 20
+base_power = 50.0
+scaling_stat = "INT"
+scaling_factor = 0.5
+path = "Agent of Darkness"
+effects = [
+    {
+        "type": "self_damage",
+        "power": 50.0,
+        "scaling_stat": "INT",
+        "scaling_factor": 0.5
+    },
+    {
+        "type": "permanent_buff",
+        "stat": "damage_mult",
+        "value": 10.0
+    },
+    {
+        "type": "permanent_buff",
+        "stat": "crit_chance",
+        "value": 10.0
+    }
+] 

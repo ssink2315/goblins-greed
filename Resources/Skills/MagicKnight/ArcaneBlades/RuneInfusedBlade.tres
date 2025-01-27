@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/SkillData.gd" id="1_skill"]
+[ext_resource type="Texture2D" uid="uid://rune_infused_blade" path="res://Assets/Icons/Skills/rune_infused_blade.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_skill")
+skill_name = "Rune-Infused Blade"
+description = "Your melee attacks deal bonus Arcane magic damage equal to 10% of your INT."
+skill_type = 2  # PASSIVE
+damage_type = 0  # PHYSICAL
+element = 6  # ARCANE
+mana_cost = 0
+path = "Blade Magic"
+effects = [
+    {
+        "type": "passive",
+        "stat": "bonus_arcane_damage",
+        "value": 10.0,
+        "scaling_stat": "INT",
+        "scaling_factor": 0.8
+    }
+] 

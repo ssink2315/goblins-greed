@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/SkillData.gd" id="1_skill"]
+[ext_resource type="Texture2D" uid="uid://mana_shield" path="res://Assets/Icons/Skills/mana_shield.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_skill")
+skill_name = "Mana Shield"
+description = "Convert 30% of damage taken to mana damage instead for 3 turns."
+skill_type = 1  # BUFF
+damage_type = 1  # MAGICAL
+element = 6  # ARCANE
+mana_cost = 30
+path = "Arcane Origin"
+effects = [
+    {
+        "type": "damage_conversion",
+        "conversion": "mana",
+        "value": 30.0,
+        "duration": 3
+    }
+] 

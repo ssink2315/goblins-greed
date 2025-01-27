@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/SkillData.gd" id="1_skill"]
+[ext_resource type="Texture2D" uid="uid://imbue_darkness" path="res://Assets/Icons/Skills/imbue_darkness.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_skill")
+skill_name = "Imbue Darkness"
+description = "Lose 15% health. Gain +15% to all resistances for 3 turns."
+skill_type = 1  # BUFF
+damage_type = 1  # MAGICAL
+element = 5  # DARK
+mana_cost = 20
+path = "Dark Arts"
+effects = [
+    {
+        "type": "hp_cost",
+        "value": 15.0
+    },
+    {
+        "type": "buff",
+        "stat": "all_res",
+        "value": 15.0,
+        "duration": 3
+    }
+] 

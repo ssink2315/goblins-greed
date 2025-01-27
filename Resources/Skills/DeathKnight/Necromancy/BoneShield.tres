@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/SkillData.gd" id="1_skill"]
+[ext_resource type="Texture2D" uid="uid://bone_shield" path="res://Assets/Icons/Skills/bone_shield.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_skill")
+skill_name = "Bone Shield"
+description = "Consume a Skeleton to gain +25% physical resistance for 3 turns."
+skill_type = 1  # BUFF
+damage_type = 0  # PHYSICAL
+element = 5  # DARK
+mana_cost = 15
+scaling_stat = "STR"
+path = "Necromancy"
+effects = [
+    {
+        "type": "sacrifice_summon",
+        "summon_type": "skeleton",
+        "count": 1
+    },
+    {
+        "type": "buff",
+        "stat": "phys_res",
+        "value": 25.0,
+        "duration": 3
+    }
+] 

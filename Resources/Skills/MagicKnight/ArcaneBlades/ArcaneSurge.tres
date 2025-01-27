@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/SkillData.gd" id="1_skill"]
+[ext_resource type="Texture2D" uid="uid://arcane_surge" path="res://Assets/Icons/Skills/arcane_surge.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_skill")
+skill_name = "Arcane Surge"
+description = "Gain +5 to STR, INT, and WIS for 3 turns."
+skill_type = 1  # BUFF
+damage_type = 0  # PHYSICAL
+element = 6  # ARCANE
+mana_cost = 30
+path = "Blade Magic"
+effects = [
+    {
+        "type": "buff",
+        "stat": "STR",
+        "value": 5.0,
+        "duration": 3
+    },
+    {
+        "type": "buff",
+        "stat": "INT",
+        "value": 5.0,
+        "duration": 3
+    },
+    {
+        "type": "buff",
+        "stat": "WIS",
+        "value": 5.0,
+        "duration": 3
+    }
+] 

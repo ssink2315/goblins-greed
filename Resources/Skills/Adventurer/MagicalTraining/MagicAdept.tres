@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/SkillData.gd" id="1_skill"]
+[ext_resource type="Texture2D" uid="uid://magic_adept" path="res://Assets/Icons/Skills/magic_adept.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_skill")
+skill_name = "Magic Adept"
+description = "Passive: +10% Max Mana."
+skill_type = 2  # PASSIVE
+damage_type = 1  # MAGICAL
+element = 0  # NONE
+mana_cost = 0
+path = "Magical Training"
+effects = [
+    {
+        "type": "passive",
+        "stat": "max_mana",
+        "value": 10.0
+    }
+] 

@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/SkillData.gd" id="1_skill"]
+[ext_resource type="Texture2D" uid="uid://mana_infusion" path="res://Assets/Icons/Skills/mana_infusion.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_skill")
+skill_name = "Mana Infusion"
+description = "Restore 50 Mana."
+skill_type = 1  # BUFF
+damage_type = 1  # MAGICAL
+element = 6  # ARCANE
+mana_cost = 0
+path = "Magical Training"
+effects = [
+    {
+        "type": "restore_mana",
+        "value": 50.0
+    }
+] 

@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/SkillData.gd" id="1_skill"]
+[ext_resource type="Texture2D" uid="uid://spellsword_fundamentals" path="res://Assets/Icons/Skills/spellsword_fundamentals.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_skill")
+skill_name = "Spellsword Fundamentals"
+description = "Passive: Crits on physical attacks restore 10 Mana."
+skill_type = 2  # PASSIVE
+damage_type = 0  # PHYSICAL
+element = 0  # NONE
+mana_cost = 0
+scaling_stat = "STR"
+path = "Magical Training"
+effects = [
+    {
+        "type": "passive",
+        "stat": "crit_mana_restore",
+        "value": 10.0
+    }
+] 

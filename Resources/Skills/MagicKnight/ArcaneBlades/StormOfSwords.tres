@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/SkillData.gd" id="1_skill"]
+[ext_resource type="Texture2D" uid="uid://storm_of_swords" path="res://Assets/Icons/Skills/storm_of_swords.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_skill")
+skill_name = "Storm of Swords"
+description = "Deal 8x weak Arcane physical damage to random enemies."
+skill_type = 0  # ACTIVE
+damage_type = 0  # PHYSICAL
+element = 6  # ARCANE
+mana_cost = 40
+base_power = 25.0
+scaling_stat = "INT"
+scaling_factor = 0.3
+path = "Blade Magic"
+effects = [
+    {
+        "type": "multi_hit",
+        "hits": 8,
+        "target": "random_enemies"
+    }
+] 

@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/SkillData.gd" id="1_skill"]
+[ext_resource type="Texture2D" uid="uid://tactical_support" path="res://Assets/Icons/Skills/tactical_support.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_skill")
+skill_name = "Tactical Support"
+description = "Grant all allies +10% Magical Defense and +10% Physical Defense for 2 turns."
+skill_type = 1  # BUFF
+damage_type = 0  # PHYSICAL
+element = 0  # NONE
+mana_cost = 25
+path = "Leadership"
+effects = [
+    {
+        "type": "buff",
+        "stat": "magic_def",
+        "value": 10.0,
+        "duration": 2,
+        "target": "all_allies"
+    },
+    {
+        "type": "buff",
+        "stat": "phys_def",
+        "value": 10.0,
+        "duration": 2,
+        "target": "all_allies"
+    }
+] 

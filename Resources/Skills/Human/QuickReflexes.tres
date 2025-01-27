@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/SkillData.gd" id="1_skill"]
+[ext_resource type="Texture2D" uid="uid://quick_reflexes" path="res://Assets/Icons/Skills/quick_reflexes.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_skill")
+skill_name = "Quick Reflexes"
+description = "Gain +10% evasion for 2 turns."
+skill_type = 1  # BUFF
+damage_type = 0  # PHYSICAL
+element = 0  # NONE
+mana_cost = 15
+path = "Adaptability"
+effects = [
+    {
+        "type": "buff",
+        "stat": "evasion",
+        "value": 10.0,
+        "duration": 2
+    }
+] 

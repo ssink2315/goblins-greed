@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/SkillData.gd" id="1_skill"]
+[ext_resource type="Texture2D" uid="uid://crimson_slash" path="res://Assets/Icons/Skills/crimson_slash.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_skill")
+skill_name = "Crimson Slash"
+description = "Deal heavy Dark physical damage. Sacrifice 10% of your max HP to gain +10% crit chance for 2 turns."
+skill_type = 0  # ACTIVE
+damage_type = 0  # PHYSICAL
+element = 5  # DARK
+mana_cost = 30
+base_power = 70.0
+scaling_stat = "INT"
+scaling_factor = 0.7
+path = "Corrupted Code"
+effects = [
+    {
+        "type": "hp_cost_max",
+        "value": 10.0
+    },
+    {
+        "type": "buff",
+        "stat": "crit_chance",
+        "value": 10.0,
+        "duration": 2
+    }
+] 

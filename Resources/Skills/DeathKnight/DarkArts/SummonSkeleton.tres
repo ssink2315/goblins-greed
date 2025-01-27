@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/SkillData.gd" id="1_skill"]
+[ext_resource type="Texture2D" uid="uid://summon_skeleton" path="res://Assets/Icons/Skills/summon_skeleton.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_skill")
+skill_name = "Summon Skeleton"
+description = "Summon a friendly Skeleton to fight for you."
+skill_type = 0  # ACTIVE
+damage_type = 1  # MAGICAL
+element = 5  # DARK
+mana_cost = 30
+path = "Dark Arts"
+effects = [
+    {
+        "type": "summon",
+        "summon_type": "skeleton",
+        "duration": -1  # Permanent until destroyed
+    }
+] 

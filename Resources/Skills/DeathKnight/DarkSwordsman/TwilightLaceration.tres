@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="SkillData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/SkillData.gd" id="1_skill"]
+[ext_resource type="Texture2D" uid="uid://twilight_laceration" path="res://Assets/Icons/Skills/twilight_laceration.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_skill")
+skill_name = "Twilight Laceration"
+description = "Deal heavy Dark physical damage. Reduce your target's healing by 50% for 3 turns."
+skill_type = 0  # ACTIVE
+damage_type = 0  # PHYSICAL
+element = 5  # DARK
+mana_cost = 35
+base_power = 70.0
+scaling_stat = "INT"
+scaling_factor = 0.7
+path = "Agent of Darkness"
+effects = [
+    {
+        "type": "debuff",
+        "stat": "healing_received",
+        "value": -50.0,
+        "duration": 3,
+        "target": "hit_target"
+    }
+] 

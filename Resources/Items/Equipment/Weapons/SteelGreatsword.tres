@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/ItemData.gd" id="1_item"]
+[ext_resource type="Texture2D" uid="uid://steel_greatsword" path="res://Assets/Icons/Items/steel_greatsword.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_item")
+item_id = "steel_greatsword"
+name = "Steel Greatsword"
+description = "A well-crafted steel greatsword. Deals devastating damage."
+icon = ExtResource("2_icon")
+item_type = 1  # WEAPON
+rarity = 1  # UNCOMMON
+value = 600
+max_stack = 1
+equipment_stats = {
+    "STR": 8,
+    "VIT": 4,
+    "phys_dmg_mod": 20.0
+} 

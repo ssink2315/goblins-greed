@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/ItemData.gd" id="1_item"]
+[ext_resource type="Texture2D" uid="uid://steel_staff" path="res://Assets/Icons/Items/steel_staff.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_item")
+item_id = "steel_staff"
+name = "Steel Staff"
+description = "A staff reinforced with steel. Excellent magical conductivity."
+icon = ExtResource("2_icon")
+item_type = 1  # WEAPON
+rarity = 1  # UNCOMMON
+value = 500
+max_stack = 1
+equipment_stats = {
+    "INT": 7,
+    "magic_dmg_mod": 15.0
+} 

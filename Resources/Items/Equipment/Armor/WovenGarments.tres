@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/ItemData.gd" id="1_item"]
+[ext_resource type="Texture2D" uid="uid://woven_garments" path="res://Assets/Icons/Items/woven_garments.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_item")
+item_id = "woven_garments"
+name = "Woven Garments"
+description = "Comfortable garments providing modest protection."
+icon = ExtResource("2_icon")
+item_type = 2  # ARMOR
+rarity = 0  # COMMON
+value = 200
+max_stack = 1
+equipment_stats = {
+    "WIS": 2,
+    "phys_res": 3.0,
+    "magic_res": 3.0,
+    "evasion": 2.0
+} 

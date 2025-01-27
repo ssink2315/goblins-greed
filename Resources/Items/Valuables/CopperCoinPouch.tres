@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/ItemData.gd" id="1_item"]
+[ext_resource type="Texture2D" uid="uid://copper_coin_pouch" path="res://Assets/Icons/Items/copper_coin_pouch.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_item")
+item_id = "copper_coin_pouch"
+name = "Copper Coin Pouch"
+description = "A small pouch containing 100-200 copper coins."
+icon = ExtResource("2_icon")
+item_type = 5  # VALUABLE
+rarity = 0  # COMMON
+value = 150
+max_stack = 99 

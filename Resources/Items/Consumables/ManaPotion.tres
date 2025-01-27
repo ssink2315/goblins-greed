@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/ItemData.gd" id="1_item"]
+[ext_resource type="Texture2D" uid="uid://mana_potion" path="res://Assets/Icons/Items/mana_potion.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_item")
+item_id = "mana_potion"
+name = "Mana Potion"
+description = "Restores 50 MP when consumed."
+icon = ExtResource("2_icon")
+item_type = 0  # CONSUMABLE
+rarity = 1  # UNCOMMON
+value = 100
+max_stack = 99
+usable_in_combat = true
+usable_in_menu = true
+effects = [
+    {
+        "type": "heal_mp",
+        "value": 50
+    }
+] 

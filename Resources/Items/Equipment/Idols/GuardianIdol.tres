@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/ItemData.gd" id="1_item"]
+[ext_resource type="Texture2D" uid="uid://guardian_idol" path="res://Assets/Icons/Items/guardian_idol.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_item")
+item_id = "guardian_idol"
+name = "Guardian's Idol"
+description = "An idol that grants the Defender passive ability."
+icon = ExtResource("2_icon")
+item_type = 3  # ACCESSORY
+rarity = 2  # RARE
+value = 1000
+max_stack = 1
+granted_passive = "defender"  # References existing passive skill
+equipment_stats = {
+    "phys_res": 5.0,
+    "magic_res": 5.0
+} 

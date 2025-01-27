@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ClassPathsData" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/ClassPathsData.gd" id="1_class"]
+[ext_resource type="Resource" uid="uid://adventurer_basics" path="res://Resources/Paths/Adventurer/AdventurerBasics.tres" id="2_path1"]
+[ext_resource type="Resource" uid="uid://magical_whimsy" path="res://Resources/Paths/Adventurer/MagicalWhimsy.tres" id="3_path2"]
+
+[resource]
+script = ExtResource("1_class")
+class_id = "adventurer"
+path_1 = ExtResource("2_path1")
+path_2 = ExtResource("3_path2") 

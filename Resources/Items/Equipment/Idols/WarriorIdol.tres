@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/ItemData.gd" id="1_item"]
+[ext_resource type="Texture2D" uid="uid://warrior_idol" path="res://Assets/Icons/Items/warrior_idol.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_item")
+item_id = "warrior_idol"
+name = "Warrior's Idol"
+description = "An idol that grants the Combat Veteran passive ability."
+icon = ExtResource("2_icon")
+item_type = 3  # ACCESSORY
+rarity = 2  # RARE
+value = 1000
+max_stack = 1
+granted_passive = "combat_veteran"  # References existing passive skill
+equipment_stats = {
+    "phys_dmg_mod": 5.0
+} 

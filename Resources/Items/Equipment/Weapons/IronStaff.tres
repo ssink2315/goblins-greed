@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/ItemData.gd" id="1_item"]
+[ext_resource type="Texture2D" uid="uid://iron_staff" path="res://Assets/Icons/Items/iron_staff.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_item")
+item_id = "iron_staff"
+name = "Iron Staff"
+description = "A simple staff with an iron core. Channels magical energy."
+icon = ExtResource("2_icon")
+item_type = 1  # WEAPON
+rarity = 0  # COMMON
+value = 250
+max_stack = 1
+equipment_stats = {
+    "INT": 5,
+    "magic_dmg_mod": 10.0
+} 

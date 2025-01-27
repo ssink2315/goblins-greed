@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/ItemData.gd" id="1_item"]
+[ext_resource type="Texture2D" uid="uid://greater_healing_potion" path="res://Assets/Icons/Items/greater_healing_potion.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_item")
+item_id = "greater_healing_potion"
+name = "Greater Healing Potion"
+description = "A large vial of potent healing liquid. Restores 200 HP."
+icon = ExtResource("2_icon")
+item_type = 0  # CONSUMABLE
+rarity = 2  # RARE
+value = 300
+max_stack = 99
+usable_in_combat = true
+usable_in_menu = true
+effects = [
+    {
+        "type": "heal_hp",
+        "value": 200
+    }
+] 

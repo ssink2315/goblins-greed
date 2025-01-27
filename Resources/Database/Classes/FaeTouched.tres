@@ -1,0 +1,32 @@
+extends ClassData
+
+func _init():
+    class_name = "Fae-Touched"
+    description = "Blessed by fae magic, these mystics blend nature and arcane powers."
+    
+    stat_growth = {
+        "STR": 0,
+        "AGI": 1,
+        "INT": 2,
+        "VIT": 0,
+        "TEC": 1,
+        "WIS": 2
+    }
+    
+    weapon_proficiencies = ["STAFF", "KNIFE"]
+    armor_proficiencies = ["ROBES", "GARMENTS"]
+    
+    class_traits = [
+        {
+            "type": "resistance",
+            "element": "Nature",
+            "value": 15.0
+        },
+        {
+            "type": "stat_modifier",
+            "stat": "magic_dmg_mod",
+            "value": 5.0
+        }
+    ]
+    
+    skill_paths = ["Nature", "Illusion", "Enchantment"] 

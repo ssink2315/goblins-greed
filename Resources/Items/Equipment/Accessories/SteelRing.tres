@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/ItemData.gd" id="1_item"]
+[ext_resource type="Texture2D" uid="uid://steel_ring" path="res://Assets/Icons/Items/steel_ring.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_item")
+item_id = "steel_ring"
+name = "Steel Ring"
+description = "A polished steel ring that provides enhanced combat abilities."
+icon = ExtResource("2_icon")
+item_type = 3  # ACCESSORY
+rarity = 1  # UNCOMMON
+value = 400
+max_stack = 1
+equipment_stats = {
+    "phys_dmg_mod": 8.0,
+    "phys_res": 3.0,
+    "crit_chance": 2.0
+} 

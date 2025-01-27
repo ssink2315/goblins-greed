@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/ItemData.gd" id="1_item"]
+[ext_resource type="Texture2D" uid="uid://sage_idol" path="res://Assets/Icons/Items/sage_idol.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_item")
+item_id = "sage_idol"
+name = "Sage's Idol"
+description = "An idol that grants the Mana Affinity passive ability."
+icon = ExtResource("2_icon")
+item_type = 3  # ACCESSORY
+rarity = 2  # RARE
+value = 1000
+max_stack = 1
+granted_passive = "mana_affinity"  # References existing passive skill
+equipment_stats = {
+    "magic_dmg_mod": 5.0
+} 

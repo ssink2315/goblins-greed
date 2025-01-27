@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/ItemData.gd" id="1_item"]
+[ext_resource type="Texture2D" uid="uid://runic_blade" path="res://Assets/Icons/Items/runic_blade.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_item")
+item_id = "runic_blade"
+name = "Runic Blade"
+description = "A sword inscribed with powerful magical runes."
+icon = ExtResource("2_icon")
+item_type = 1  # WEAPON
+rarity = 2  # RARE
+value = 500
+max_stack = 1
+equipment_stats = {
+    "STR": 5,
+    "INT": 4,
+    "magic_dmg_mod": 8.0,
+    "phys_dmg_mod": 6.0
+} 

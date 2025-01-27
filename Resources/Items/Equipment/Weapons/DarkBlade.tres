@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/ItemData.gd" id="1_item"]
+[ext_resource type="Texture2D" uid="uid://dark_blade" path="res://Assets/Icons/Items/dark_blade.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_item")
+item_id = "dark_blade"
+name = "Dark Blade"
+description = "A blade infused with dark energy."
+icon = ExtResource("2_icon")
+item_type = 1  # WEAPON
+rarity = 1  # UNCOMMON
+value = 300
+max_stack = 1
+equipment_stats = {
+    "STR": 4,
+    "dark_dmg_mod": 8.0,
+    "phys_dmg_mod": 5.0
+} 

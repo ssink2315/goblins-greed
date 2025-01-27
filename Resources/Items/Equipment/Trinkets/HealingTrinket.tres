@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/ItemData.gd" id="1_item"]
+[ext_resource type="Texture2D" uid="uid://healing_trinket" path="res://Assets/Icons/Items/healing_trinket.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_item")
+item_id = "healing_trinket"
+name = "Healing Trinket"
+description = "A trinket blessed with holy energy. Grants the ability to cast Heal."
+icon = ExtResource("2_icon")
+item_type = 3  # ACCESSORY
+rarity = 2  # RARE
+value = 1000
+max_stack = 1
+granted_skill = "heal"  # References existing skill
+equipment_stats = {
+    "healing_done": 5.0
+} 

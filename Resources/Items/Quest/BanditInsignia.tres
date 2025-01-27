@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/ItemData.gd" id="1_item"]
+[ext_resource type="Texture2D" uid="uid://bandit_insignia" path="res://Assets/Icons/Items/bandit_insignia.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_item")
+item_id = "bandit_insignia"
+name = "Bandit Insignia"
+description = "A badge worn by high-ranking bandits. Proof of their defeat."
+icon = ExtResource("2_icon")
+item_type = 6  # QUEST
+rarity = 2  # RARE
+value = 0
+max_stack = 99 

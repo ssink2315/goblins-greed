@@ -1,0 +1,15 @@
+extends RaceData
+
+func _init():
+    race_name = "Dwarf"
+    description = "Hardy and strong, dwarves are naturally resilient and powerful."
+    base_stats = {
+        "STR": 12,
+        "AGI": 8,
+        "INT": 8,
+        "VIT": 14,
+        "TEC": 8,
+        "WIS": 10
+    }
+    passive_name = "Deep Earth Soul"
+    passive_description = "Gain +1 HP for each level." 

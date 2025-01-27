@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/ItemData.gd" id="1_item"]
+[ext_resource type="Texture2D" uid="uid://flame_trinket" path="res://Assets/Icons/Items/flame_trinket.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_item")
+item_id = "flame_trinket"
+name = "Flame Trinket"
+description = "A trinket imbued with fire magic. Grants the ability to cast Fireball."
+icon = ExtResource("2_icon")
+item_type = 3  # ACCESSORY
+rarity = 2  # RARE
+value = 1000
+max_stack = 1
+granted_skill = "fireball"  # References existing skill
+equipment_stats = {
+    "magic_dmg_mod": 5.0
+} 

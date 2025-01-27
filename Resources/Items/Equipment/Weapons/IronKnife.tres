@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/ItemData.gd" id="1_item"]
+[ext_resource type="Texture2D" uid="uid://iron_knife" path="res://Assets/Icons/Items/iron_knife.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_item")
+item_id = "iron_knife"
+name = "Iron Knife"
+description = "A versatile iron knife. Good for quick strikes."
+icon = ExtResource("2_icon")
+item_type = 1  # WEAPON
+rarity = 0  # COMMON
+value = 200
+max_stack = 1
+equipment_stats = {
+    "STR": 2,
+    "AGI": 2,
+    "TEC": 2,
+    "phys_dmg_mod": 5.0
+} 

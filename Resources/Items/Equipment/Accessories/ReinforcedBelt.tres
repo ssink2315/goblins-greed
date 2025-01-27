@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/ItemData.gd" id="1_item"]
+[ext_resource type="Texture2D" uid="uid://reinforced_belt" path="res://Assets/Icons/Items/reinforced_belt.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_item")
+item_id = "reinforced_belt"
+name = "Reinforced Belt"
+description = "A reinforced leather belt that greatly enhances combat capabilities."
+icon = ExtResource("2_icon")
+item_type = 3  # ACCESSORY
+rarity = 1  # UNCOMMON
+value = 300
+max_stack = 1
+equipment_stats = {
+    "evasion": 5.0,
+    "accuracy": 5.0,
+    "crit_chance": 2.0
+} 

@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/ItemData.gd" id="1_item"]
+[ext_resource type="Texture2D" uid="uid://steel_mace" path="res://Assets/Icons/Items/steel_mace.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_item")
+item_id = "steel_mace"
+name = "Steel Mace"
+description = "A steel mace with enhanced magical conductivity."
+icon = ExtResource("2_icon")
+item_type = 1  # WEAPON
+rarity = 1  # UNCOMMON
+value = 500
+max_stack = 1
+equipment_stats = {
+    "INT": 4,
+    "WIS": 4,
+    "magic_dmg_mod": 12.0
+} 

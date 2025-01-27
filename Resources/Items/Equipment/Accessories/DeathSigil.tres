@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/ItemData.gd" id="1_item"]
+[ext_resource type="Texture2D" uid="uid://death_sigil" path="res://Assets/Icons/Items/death_sigil.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_item")
+item_id = "death_sigil"
+name = "Death Sigil"
+description = "A dark sigil that channels necrotic energy."
+icon = ExtResource("2_icon")
+item_type = 3  # ACCESSORY
+rarity = 1  # UNCOMMON
+value = 250
+max_stack = 1
+equipment_stats = {
+    "dark_dmg_mod": 8.0,
+    "dark_res": 5.0,
+    "life_steal": 2.0
+} 

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/ItemData.gd" id="1_item"]
+[ext_resource type="Texture2D" uid="uid://slime_essence" path="res://Assets/Icons/Items/slime_essence.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_item")
+item_id = "slime_essence"
+name = "Slime Essence"
+description = "A gelatinous substance used in crafting basic potions."
+icon = ExtResource("2_icon")
+item_type = 4  # MATERIAL
+rarity = 0  # COMMON
+value = 15
+max_stack = 99 

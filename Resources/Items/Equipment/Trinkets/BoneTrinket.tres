@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/ItemData.gd" id="1_item"]
+[ext_resource type="Texture2D" uid="uid://bone_trinket" path="res://Assets/Icons/Items/bone_trinket.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_item")
+item_id = "bone_trinket"
+name = "Bone Trinket"
+description = "A trinket made of enchanted bones. Grants the ability to summon undead."
+icon = ExtResource("2_icon")
+item_type = 3  # ACCESSORY
+rarity = 2  # RARE
+value = 1000
+max_stack = 1
+granted_skill = "summon_skeleton"  # References existing skill
+equipment_stats = {
+    "magic_dmg_mod": 5.0
+} 

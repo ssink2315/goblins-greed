@@ -1,0 +1,32 @@
+extends ClassData
+
+func _init():
+    class_name = "Dragoon"
+    description = "Elite spear-wielders who specialize in aerial combat."
+    
+    stat_growth = {
+        "STR": 2,
+        "AGI": 2,
+        "INT": 0,
+        "VIT": 1,
+        "TEC": 1,
+        "WIS": 0
+    }
+    
+    weapon_proficiencies = ["SPEAR", "SWORD"]
+    armor_proficiencies = ["MEDIUM", "LIGHT"]
+    
+    class_traits = [
+        {
+            "type": "combat_modifier",
+            "modifier": "crit_damage",
+            "value": 15.0
+        },
+        {
+            "type": "stat_modifier",
+            "stat": "evasion",
+            "value": 5.0
+        }
+    ]
+    
+    skill_paths = ["Jump", "Dragon", "Combat"] 

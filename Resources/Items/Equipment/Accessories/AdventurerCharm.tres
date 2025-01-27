@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/ItemData.gd" id="1_item"]
+[ext_resource type="Texture2D" uid="uid://adventurer_charm" path="res://Assets/Icons/Items/adventurer_charm.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_item")
+item_id = "adventurer_charm"
+name = "Adventurer's Charm"
+description = "A lucky charm that enhances survival skills."
+icon = ExtResource("2_icon")
+item_type = 3  # ACCESSORY
+rarity = 0  # COMMON
+value = 200
+max_stack = 1
+equipment_stats = {
+    "evasion": 3.0,
+    "crit_chance": 2.0,
+    "healing_received": 5.0
+} 

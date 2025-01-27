@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/ItemData.gd" id="1_item"]
+[ext_resource type="Texture2D" uid="uid://iron_ring" path="res://Assets/Icons/Items/iron_ring.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_item")
+item_id = "iron_ring"
+name = "Iron Ring"
+description = "A simple iron ring that enhances physical capabilities."
+icon = ExtResource("2_icon")
+item_type = 3  # ACCESSORY
+rarity = 0  # COMMON
+value = 200
+max_stack = 1
+equipment_stats = {
+    "phys_dmg_mod": 5.0,
+    "phys_res": 2.0
+} 

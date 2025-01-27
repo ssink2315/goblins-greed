@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/ItemData.gd" id="1_item"]
+[ext_resource type="Texture2D" uid="uid://embroidered_robes" path="res://Assets/Icons/Items/embroidered_robes.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_item")
+item_id = "embroidered_robes"
+name = "Embroidered Robes"
+description = "Magically embroidered robes enhancing spellcasting."
+icon = ExtResource("2_icon")
+item_type = 2  # ARMOR
+rarity = 1  # UNCOMMON
+value = 400
+max_stack = 1
+equipment_stats = {
+    "MDEF": 2,
+    "INT": 3,
+    "phys_res": 2.0,
+    "magic_res": 3.0
+} 

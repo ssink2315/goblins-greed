@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/ItemData.gd" id="1_item"]
+[ext_resource type="Texture2D" uid="uid://sage_staff" path="res://Assets/Icons/Items/sage_staff.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_item")
+item_id = "sage_staff"
+name = "Sage Staff"
+description = "A staff imbued with ancient wisdom."
+icon = ExtResource("2_icon")
+item_type = 1  # WEAPON
+rarity = 2  # RARE
+value = 600
+max_stack = 1
+equipment_stats = {
+    "INT": 8,
+    "WIS": 5,
+    "magic_dmg_mod": 12.0,
+    "mana_cost_reduction": 5.0
+} 

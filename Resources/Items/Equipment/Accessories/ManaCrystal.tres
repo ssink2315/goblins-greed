@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/ItemData.gd" id="1_item"]
+[ext_resource type="Texture2D" uid="uid://mana_crystal" path="res://Assets/Icons/Items/mana_crystal.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_item")
+item_id = "mana_crystal"
+name = "Mana Crystal"
+description = "A crystal that enhances magical abilities."
+icon = ExtResource("2_icon")
+item_type = 3  # ACCESSORY
+rarity = 0  # COMMON
+value = 200
+max_stack = 1
+equipment_stats = {
+    "max_mana": 20,
+    "mana_regen": 2.0,
+    "magic_dmg_mod": 3.0
+} 

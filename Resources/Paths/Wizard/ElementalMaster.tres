@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="PathData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/PathData.gd" id="1_path"]
+
+[resource]
+script = ExtResource("1_path")
+path_id = "elemental_master"
+path_name = "Elemental Master"
+description = "Master the fundamental forces of nature through elemental magic."
+major_talent_pool = [
+    "firestorm",
+    "ice_spear",
+    "lightning_bolt",
+    "earth_spike",
+    "chain_lightning"
+]
+minor_talent_pool = [
+    "elemental_affinity",
+    "elemental_barrier",
+    "elemental_focus"
+]
+stat_distribution = {
+    "INT": 3,
+    "TEC": 1,
+    "WIS": 0,
+    "STR": 0,
+    "AGI": 0,
+    "VIT": 0
+} 

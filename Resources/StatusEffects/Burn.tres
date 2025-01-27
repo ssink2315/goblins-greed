@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="StatusEffect" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Combat/StatusEffect.gd" id="1_status"]
+[ext_resource type="Texture2D" uid="uid://burn_status" path="res://Assets/Icons/Status/burn.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_status")
+effect_name = "Burn"
+description = "Taking Fire damage over time. Reduced defenses."
+icon = ExtResource("2_icon")
+effect_type = 2  # DAMAGE
+duration = 3
+can_stack = false
+max_stacks = 1
+damage_percent = 4.5  # Average of 3-6%
+damage_type = "magical"
+damage_element = 1  # FIRE
+stat_modifiers = {
+    "phys_res": -10.0,
+    "magic_res": -10.0
+} 

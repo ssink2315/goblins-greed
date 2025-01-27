@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="PathData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/PathData.gd" id="1_path"]
+
+[resource]
+script = ExtResource("1_path")
+path_id = "magical_whimsy"
+path_name = "Magical Whimsy"
+description = "A dabbling in the magical arts, from basic spells to advanced techniques."
+major_talent_pool = [
+    "arcane_spark",
+    "fire_sprite",
+    "mystic_barrier",
+    "restoration"
+]
+minor_talent_pool = [
+    "fireball",
+    "magic_adept",
+    "magic_potency",
+    "mana_infusion",
+    "rune_blast",
+    "runic_protection",
+    "smite",
+    "spellsword_fundamentals"
+]
+stat_distribution = {
+    "INT": 2,
+    "WIS": 1,
+    "TEC": 1,
+    "STR": 0,
+    "AGI": 0,
+    "VIT": 0
+} 

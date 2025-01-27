@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="PathData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/PathData.gd" id="1_path"]
+
+[resource]
+script = ExtResource("1_path")
+path_id = "chivalric_code"
+path_name = "Chivalric Code"
+description = "The sacred oaths and disciplines of the Magic Knights."
+major_talent_pool = [
+    "holy_strike",
+    "protective_aura",
+    "righteous_fury",
+    "knights_blessing",
+    "valiant_charge"
+]
+minor_talent_pool = [
+    "unwavering_resolve",
+    "sacred_oath",
+    "divine_protection"
+]
+stat_distribution = {
+    "VIT": 2,
+    "STR": 1,
+    "WIS": 1,
+    "AGI": 0,
+    "INT": 0,
+    "TEC": 0
+} 

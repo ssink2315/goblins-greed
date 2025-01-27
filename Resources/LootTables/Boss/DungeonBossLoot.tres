@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="LootTable" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/LootTable.gd" id="1_loot"]
+
+[resource]
+script = ExtResource("1_loot")
+items = [
+    {
+        "item_id": "gold_coin_pouch",
+        "weight": 1000,  # 100% chance
+        "quantity": [2, 3]
+    },
+    {
+        "item_id": "rare_weapon_chest",
+        "weight": 500,  # 50% chance
+        "quantity": [1, 1]
+    },
+    {
+        "item_id": "greater_healing_potion",
+        "weight": 800,  # 80% chance
+        "quantity": [2, 3]
+    },
+    {
+        "item_id": "greater_mana_potion",
+        "weight": 800,  # 80% chance
+        "quantity": [2, 3]
+    },
+    {
+        "item_id": "skill_crystal",
+        "weight": 300,  # 30% chance
+        "quantity": [1, 1]
+    }
+]
+guaranteed_items = [
+    {
+        "item_id": "boss_essence",
+        "quantity": 1
+    },
+    {
+        "item_id": "dungeon_key",
+        "quantity": 1
+    }
+] 

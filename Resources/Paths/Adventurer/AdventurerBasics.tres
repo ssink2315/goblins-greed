@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="PathData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/PathData.gd" id="1_path"]
+
+[resource]
+script = ExtResource("1_path")
+path_id = "adventurer_basics"
+path_name = "Adventurer's Basics"
+description = "The fundamental skills of an adventurer, combining swordplay with leadership."
+major_talent_pool = [
+    "cleave",
+    "parry",
+    "trained_swordsman"
+]
+minor_talent_pool = [
+    "combat_veteran",
+    "commanding_presence",
+    "tactical_genius"
+]
+stat_distribution = {
+    "STR": 2,
+    "VIT": 1,
+    "TEC": 1,
+    "AGI": 0,
+    "INT": 0,
+    "WIS": 0
+} 

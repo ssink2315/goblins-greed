@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="PathData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/PathData.gd" id="1_path"]
+
+[resource]
+script = ExtResource("1_path")
+path_id = "blade_magic"
+path_name = "Blade Magic"
+description = "The art of infusing martial prowess with magical energy."
+major_talent_pool = [
+    "magic_blade",
+    "elemental_strike",
+    "runic_slash",
+    "spell_parry",
+    "arcane_thrust"
+]
+minor_talent_pool = [
+    "spell_affinity",
+    "magic_barrier",
+    "mana_strike"
+]
+stat_distribution = {
+    "STR": 2,
+    "INT": 1,
+    "VIT": 1,
+    "AGI": 0,
+    "WIS": 0,
+    "TEC": 0
+} 

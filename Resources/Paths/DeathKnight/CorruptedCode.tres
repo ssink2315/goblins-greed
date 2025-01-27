@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="PathData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/PathData.gd" id="1_path"]
+
+[resource]
+script = ExtResource("1_path")
+path_id = "corrupted_code"
+path_name = "Corrupted Code"
+description = "Twisted oaths that grant forbidden power."
+major_talent_pool = [
+    "cursed_blade",
+    "blood_pact",
+    "corrupting_strike",
+    "dark_sacrifice",
+    "vile_resurgence"
+]
+minor_talent_pool = [
+    "blood_price",
+    "dark_bargain",
+    "corrupted_vigor"
+]
+stat_distribution = {
+    "VIT": 2,
+    "STR": 1,
+    "INT": 1,
+    "AGI": 0,
+    "WIS": 0,
+    "TEC": 0
+} 

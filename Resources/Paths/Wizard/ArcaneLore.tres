@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="PathData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/PathData.gd" id="1_path"]
+
+[resource]
+script = ExtResource("1_path")
+path_id = "arcane_lore"
+path_name = "Arcane Lore"
+description = "Delve into the mysteries of pure arcane magic."
+major_talent_pool = [
+    "arcane_barrage",
+    "mana_shield",
+    "arcane_explosion",
+    "arcane_mastery",
+    "arcane_surge"
+]
+minor_talent_pool = [
+    "magic_adept",
+    "magic_potency",
+    "mana_infusion",
+    "runic_protection",
+    "spellsword_fundamentals"
+]
+stat_distribution = {
+    "INT": 3,
+    "WIS": 1,
+    "TEC": 0,
+    "STR": 0,
+    "AGI": 0,
+    "VIT": 0
+} 

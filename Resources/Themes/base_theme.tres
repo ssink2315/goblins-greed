@@ -1,0 +1,38 @@
+[gd_resource type="Theme" load_steps=8 format=3]
+
+[ext_resource type="StyleBox" uid="panel_style" path="res://Resources/Themes/StyleBoxes/panel.tres"]
+[ext_resource type="StyleBox" uid="button_normal" path="res://Resources/Themes/StyleBoxes/button_normal.tres"]
+[ext_resource type="StyleBox" uid="button_hover" path="res://Resources/Themes/StyleBoxes/button_hover.tres"]
+[ext_resource type="StyleBox" uid="button_pressed" path="res://Resources/Themes/StyleBoxes/button_pressed.tres"]
+[ext_resource type="StyleBox" uid="button_disabled" path="res://Resources/Themes/StyleBoxes/button_disabled.tres"]
+
+[resource]
+# Global settings
+default_font_size = 16
+
+# Button styles
+Button/colors/font_color = Color("E6E6E6")
+Button/colors/font_hover_color = Color("FFFFFF")
+Button/colors/font_disabled_color = Color("E6E6E6", 0.5)
+Button/constants/h_separation = 5
+Button/constants/minimum_size = Vector2(32, 32)
+Button/styles/normal = ExtResource("button_normal")
+Button/styles/hover = ExtResource("button_hover")
+Button/styles/pressed = ExtResource("button_pressed")
+Button/styles/disabled = ExtResource("button_disabled")
+
+# Panel styles
+PanelContainer/styles/panel = ExtResource("panel_style")
+
+# Label styles
+Label/colors/font_color = Color("E6E6E6")
+Label/font_sizes/normal = 16
+Label/font_sizes/header = 24
+Label/font_sizes/small = 14
+
+# MarginContainer constants
+MarginContainer/constants/margin_outer = 20
+MarginContainer/constants/margin_inner = 10
+
+# ScrollContainer styles
+ScrollContainer/styles/bg = ExtResource("panel_style")

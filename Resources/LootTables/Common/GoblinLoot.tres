@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="LootTable" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/LootTable.gd" id="1_loot"]
+
+[resource]
+script = ExtResource("1_loot")
+items = [
+    {
+        "item_id": "copper_coin_pouch",
+        "weight": 400,  # 40% chance
+        "quantity": [1, 1]
+    },
+    {
+        "item_id": "crude_dagger",
+        "weight": 150,  # 15% chance
+        "quantity": [1, 1]
+    },
+    {
+        "item_id": "leather_scraps",
+        "weight": 600,  # 60% chance
+        "quantity": [2, 4]
+    },
+    {
+        "item_id": "minor_healing_potion",
+        "weight": 250,  # 25% chance
+        "quantity": [1, 2]
+    }
+] 

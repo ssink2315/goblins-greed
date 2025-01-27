@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="StatusEffect" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Combat/StatusEffect.gd" id="1_status"]
+[ext_resource type="Texture2D" uid="uid://doom_status" path="res://Assets/Icons/Status/doom.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_status")
+effect_name = "Doom"
+description = "Taking Dark magical damage over time. Death approaches..."
+icon = ExtResource("2_icon")
+effect_type = 2  # DAMAGE
+duration = 3
+can_stack = false
+max_stacks = 1
+damage_per_turn = 0  # Calculated dynamically as % of max HP
+stat_modifiers = {}
+healing_per_turn = 0
+prevents_actions = false 

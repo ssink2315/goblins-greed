@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="StatusEffect" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Combat/StatusEffect.gd" id="1_status"]
+[ext_resource type="Texture2D" uid="uid://curse_status" path="res://Assets/Icons/Status/curse.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_status")
+effect_name = "Curse"
+description = "Reduced accuracy and evasion."
+icon = ExtResource("2_icon")
+effect_type = 1  # DEBUFF
+duration = 3
+can_stack = false
+max_stacks = 1
+stat_modifiers = {
+    "accuracy": -10.0,
+    "evasion": -10.0
+} 

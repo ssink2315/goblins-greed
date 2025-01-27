@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="PathData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Data/PathData.gd" id="1_path"]
+
+[resource]
+script = ExtResource("1_path")
+path_id = "agent_of_darkness"
+path_name = "Agent of Darkness"
+description = "Channel the powers of darkness through martial combat."
+major_talent_pool = [
+    "hex_blade",
+    "dark_sweep",
+    "soul_drain",
+    "shadow_strike",
+    "death_mark"
+]
+minor_talent_pool = [
+    "dark_resilience",
+    "soul_eater",
+    "undying_might"
+]
+stat_distribution = {
+    "STR": 2,
+    "VIT": 1,
+    "TEC": 1,
+    "AGI": 0,
+    "INT": 0,
+    "WIS": 0
+} 

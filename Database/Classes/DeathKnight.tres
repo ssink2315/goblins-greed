@@ -1,0 +1,32 @@
+extends ClassData
+
+func _init():
+    class_name = "Death Knight"
+    description = "Dark warriors who command necrotic energies and heavy armor."
+    
+    stat_growth = {
+        "STR": 2,
+        "AGI": 0,
+        "INT": 1,
+        "VIT": 2,
+        "TEC": 0,
+        "WIS": 1
+    }
+    
+    weapon_proficiencies = ["GREATSWORD", "MACE"]
+    armor_proficiencies = ["HEAVY", "MEDIUM"]
+    
+    class_traits = [
+        {
+            "type": "resistance",
+            "element": "Dark",
+            "value": 15.0
+        },
+        {
+            "type": "stat_modifier",
+            "stat": "phys_def",
+            "value": 10.0
+        }
+    ]
+    
+    skill_paths = ["Dark", "Combat", "Death"] 

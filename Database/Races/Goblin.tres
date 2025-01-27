@@ -1,0 +1,15 @@
+extends RaceData
+
+func _init():
+    race_name = "Goblin"
+    description = "Quick and cunning, goblins excel at precision and technical skills."
+    base_stats = {
+        "STR": 8,
+        "AGI": 12,
+        "INT": 8,
+        "VIT": 10,
+        "TEC": 14,
+        "WIS": 8
+    }
+    passive_name = "Wily and Quick"
+    passive_description = "Gain +5% Crit Chance and +5% Evasion." 

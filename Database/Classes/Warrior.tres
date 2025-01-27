@@ -1,0 +1,32 @@
+extends ClassData
+
+func _init():
+    class_name = "Warrior"
+    description = "Masters of weapons and combat, warriors excel at physical combat and defense."
+    
+    stat_growth = {
+        "STR": 3,
+        "AGI": 1,
+        "INT": 0,
+        "VIT": 2,
+        "TEC": 0,
+        "WIS": 0
+    }
+    
+    weapon_proficiencies = ["SWORD", "AXE", "MACE", "SPEAR"]
+    armor_proficiencies = ["LIGHT", "MEDIUM", "HEAVY"]
+    
+    class_traits = [
+        {
+            "type": "stat_modifier",
+            "stat": "phys_dmg_mod",
+            "value": 10.0
+        },
+        {
+            "type": "stat_modifier",
+            "stat": "phys_def",
+            "value": 5.0
+        }
+    ]
+    
+    skill_paths = ["Combat", "Defense", "Tactics"] 

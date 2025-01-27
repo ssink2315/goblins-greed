@@ -1,0 +1,15 @@
+extends RaceData
+
+func _init():
+    race_name = "Bulltribe"
+    description = "Powerful and resilient, the Bulltribe are natural warriors with thick hides."
+    base_stats = {
+        "STR": 12,
+        "AGI": 10,
+        "INT": 10,
+        "VIT": 12,
+        "TEC": 8,
+        "WIS": 8
+    }
+    passive_name = "Tough Hide"
+    passive_description = "Gain 10% Physical Resistance and +1 Physical Armor." 
